@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 
+@st.cache
 def introduction():
     st.title("ABRA: The Comeback")
     st.subheader('by Data Science Fellowship Cohort 8 - Sprint 3 - Group 2 (2FUSE)')

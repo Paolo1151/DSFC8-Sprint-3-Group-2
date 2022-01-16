@@ -5,6 +5,7 @@ from spotipy.oauth2 import SpotifyClientCredentials
 import keyring
 import time
 
+@st.cache
 def recommendation_engine():
     st.title('Recommended Songs for seed track: DEDMA')
     st.write("https://open.spotify.com/playlist/5gbaOZOo7Qq5tmPTAP2nrd")

@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 
+@st.cache
 def objective():
     st.write("")
     st.subheader("OBJECTIVES")
