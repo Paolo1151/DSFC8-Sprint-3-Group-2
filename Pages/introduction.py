@@ -1,8 +1,7 @@
 import streamlit as st
 from PIL import Image
 
-@st.cache
-def introduction():
+def display():
     st.title("ABRA: The Comeback")
     st.subheader('by Data Science Fellowship Cohort 8 - Sprint 3 - Group 2 (2FUSE)')
     st.write('Paolo, Kui, Ale, Selin, MaCris (mentored by Aaron)')
@@ -21,5 +20,3 @@ def introduction():
     st.image(discography)
     st.markdown("For more Abra's works, go to: https://www.youtube.com/c/abraofficial/featured") 
     st.markdown("Listen to Abra's collaboration with Chito Miranda: https://youtu.be/9QcIo20wok0")
-    
-    pass

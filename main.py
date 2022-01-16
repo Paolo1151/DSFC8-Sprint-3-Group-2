@@ -1,6 +1,6 @@
 import streamlit as st
 
-import pages
+from pages import conclusion, introduction, objective, recommendation_engine, time_series
 
 def initialize():
     PAGES = [
@@ -14,15 +14,15 @@ def initialize():
     page = st.sidebar.radio("Page Navigation", PAGES)
 
     if page == 'Introduction':
-        pages.introduction.introduction()
+        introduction.display()
     elif page == 'Objective':
-        pages.objective.objective()
+        objective.display()
     elif page == 'Time Series Analysis and Forecasting':
-        pages.time_series.time_series()
+        time_series.display()
     elif page == 'Recommendation Engine':
-        pages.recommendation_engine.recommendation_engine()
+        recommendation_engine.display()
     elif page == 'Conclusion and Recommendations':
-        pages.conclusion.conclusion()
+        conclusion.display()
 
 if __name__ == "__main__":
     initialize() 

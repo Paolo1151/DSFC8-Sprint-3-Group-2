@@ -1,8 +1,7 @@
 import streamlit as st
 from PIL import Image
 
-@st.cache
-def objective():
+def display():
     st.write("")
     st.subheader("OBJECTIVES")
     objectives = Image.open("Assets\Images\Objectives.PNG")
@@ -18,5 +17,3 @@ def objective():
 
     reco_engine = Image.open("Assets\Images\Method_RecoEngine.PNG")
     st.image(reco_engine)
-
-    pass

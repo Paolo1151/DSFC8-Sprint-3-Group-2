@@ -1,15 +1,10 @@
 import streamlit as st
-import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
 
-import keyring
-import time
-
-@st.cache
-def recommendation_engine():
+def display():
     st.title('Recommended Songs for seed track: DEDMA')
     st.write("https://open.spotify.com/playlist/5gbaOZOo7Qq5tmPTAP2nrd")
     
+    '''
     client_id=keyring.get_password('spotify', 'cid')
     client_secret=keyring.get_password('spotify', 'secret') 
     redirect_uri='https://localhost:8888/callback/'
@@ -33,10 +28,13 @@ def recommendation_engine():
     new_playlist_name = "Eskwelabs: Recommendations for seed track DEDMA"    
     new_playlist = sp_playlist.user_playlist_create(username, name=new_playlist_name)
     new_playlist
+
+    
     
     new_playlist['id']
     
     playlist_id=new_playlist['id']
     sp_playlist.user_playlist_add_tracks(username, playlist_id, track_id_list)
 
-    pass
+    '''
+
