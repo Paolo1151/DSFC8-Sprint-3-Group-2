@@ -1,4 +1,6 @@
 import streamlit as st
+from PIL import Image
+
 
 def conclusion():
     st.title("Conclusions and Recommendations")
