@@ -76,7 +76,7 @@ class Recommender_Page():
             # Outro message
             st.markdown("# So, what do you think? \n### Will **{0}** make a comeback?".format(artist_name))
             st.markdown(" - Try increasing the number of items for better results!")
-            st.markdown(" - Different distance metrics also yield different outcomes.")
+            st.markdown(" - Different distance metrics also yield different outcomes!")
             st.markdown("### Who do you think should make a comeback next?")
 
         return
