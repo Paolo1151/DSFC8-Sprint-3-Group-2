@@ -10,7 +10,7 @@ DATA_tra = "db/transformers/"
 DATA_csv = "db/data/"
 
 # Query track data csv list
-CSV = ["abra.csv", "top200-genres_RF.csv"]
+CSV = ["abra.csv", "top200-genres.csv"]
 
 # Class SeedService
 class SeedService():
@@ -63,7 +63,7 @@ class SeedService():
 
         # Scale data if main artist CSV file:
         if i == 0:
-            self.seed.data = self.scale(seed_track_data)
+            self.seed.data = self.scale(self.seed.data)
             self.seed.data = self.classifier.predict(self.seed)
 
         del seed_track_data
