@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import streamlit as st
+from PIL import Image
 
 import plotly.express as px
 
@@ -120,7 +121,52 @@ In short, no party = no party music. What is the substitute for this? Hiphop mus
 
     st.markdown("""
 Given those points, where then is Hiphop heading? Being under a subgenre of hiphop, we want to see a possible upper bound in our client, ABRA's number of streams and popularity.
+
+The group tried to forecast the trend of the total sum of Hiphop in the next month to see where they will go.
+We created 3 Models that would help get us this insight:
+
+1. ARIMA
+2. ExponentialSmoothing
+3. XGBRegressor
+
+First, let's check how their forecasts compare to true values.
+    """)
+
+    arima_valid = Image.open(os.getcwd()+'\\assets\\images\\ARIMA_validation.jpg')
+    exponential_valid = Image.open(os.getcwd()+'\\assets\\images\\Expo_Validation.jpg')
+    ml_valid = Image.open(os.getcwd()+'\\assets\\images\\ML_Validation.jpg')
+
+    st.image(arima_valid, caption="ARIMA Validation Performance")
+    st.image(exponential_valid, caption="Exponential Smoothing Validation Performance")
+    st.image(ml_valid, caption="XGBoost Validation Performance")
+
+    st.markdown("""
+As we can see, The XGBoost was able to learn a very close estimate of the trend using walk_forward_validation.
+There is a big anomaly present in the Valid Set namely the big gap between September to October. This was a limitation
+on the ML Model. Perhaps more engineering is required for the ML Model to learn the spike.
+
+Using the XGBoost Model, we are able to forecast where hiphop will be going for the next month
+    """)
+
+    ml_fore = Image.open(os.getcwd()+'\\assets\\images\\ML_Forecast.jpg')
+
+    st.image(ml_fore, caption="Hiphop Number of Streams forecast for the next month")
+
+    st.markdown("""
+After 2 months, it plateau at around 230000 streams for the genre. In the next month, 
+the model predicts that the number of streams of hiphop would hover around 235,000 then plummet to 220,000 then
+settle at around 230,000 streams.
+
+This result tells us that the future of hiphop is bright. Having a consistent amount of streams, 
+means that any artist pursuing this genre is likely to arrive at this boundary of 230,000 streams.
+
+As for ABRA, this tells us that there is still a lot more to improve in terms of streams.
+If he continues on this path, he can garner at most an average of 230,000 streams until next month!
     """)
 
 
+
+
+
+    
 
