@@ -165,7 +165,7 @@ class Recommender_Page():
                         hspace=0.9)
         st.pyplot(fig)
 
-        st.markdown(" - When producing a new track, the following audio features can provide ideas as a baseline for beats design like *tempo*.")
+        st.markdown(" - When producing a new track, the following audio features like *tempo* can provide ideas as a baseline for beats design.")
         st.markdown(" - These data were extracted from the top recommendation results.")
         st.markdown("### Recommender Top Tracks: ")
         st.write(data.drop("track_id", axis=1).reset_index(drop=True))
