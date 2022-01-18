@@ -7,10 +7,6 @@ def display():
     st.title("ABRA: The Comeback")
     st.subheader('by Data Science Fellowship Cohort 8 - Sprint 3 - Group 2 (2FUSE)')
     st.write('Paolo, Kui, Ale, Selin, MaCris (mentored by Aaron)')
-    
-    st.write(os.getcwd())
-    st.write(os.listdir())
-    st.write(os.listdir(os.getcwd() + '/Assets'))
 
     title_slide = Image.open(os.getcwd() + '/Assets/Images/TitleSlide.PNG')
 

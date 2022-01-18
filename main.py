@@ -14,10 +14,6 @@ def initialize():
         'Conclusion and Recommendations'
     ]
 
-    st.write(os.getcwd())
-    st.write(os.listdir())
-    st.write(os.listdir(os.getcwd() + '/Assets/Images'))
-
     page = st.sidebar.radio("Page Navigation", PAGES)
 
     if page == 'Introduction':
