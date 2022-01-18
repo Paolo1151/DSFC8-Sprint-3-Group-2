@@ -74,7 +74,7 @@ class Recommender_Page():
             self.display_recom_info(recom_df)
 
             # Outro message
-            st.markdown("# So, what do you think? \n### Will **{0}** make a comeback?".format(artist_name))
+            st.markdown("# So, what do you think? \n### Can **{0}** make a comeback?".format(artist_name))
             st.markdown(" - Try increasing the number of items for better results!")
             st.markdown(" - Different distance metrics also yield different outcomes!")
             st.markdown("### Who do you think should make a comeback next?")
