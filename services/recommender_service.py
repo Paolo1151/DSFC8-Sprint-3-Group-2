@@ -27,6 +27,7 @@ class RecommenderService():
         genre_cols = [col for col in chart_tracks_df.columns if ('predicted_' in col)&('genre' not in col)]
         cols = seed.feature_cols + genre_cols
 
+        # Generate distances
         chart_tracks_df['manhattan_dist'] = chart_tracks_df.apply(lambda x: manhattan_distances(x[cols].values.reshape(-1, 1),\
                                                                   seed_track_data[cols].values.reshape(-1, 1))\
                                                                   .flatten()[0], axis=1)
@@ -36,9 +37,15 @@ class RecommenderService():
         chart_tracks_df['cosine_dist'] = chart_tracks_df.apply(lambda x: 1-cosine_similarity(x[cols].values.reshape(1, -1),\
                                                                         seed_track_data[cols].values.reshape(1, -1))\
                                                                         .flatten()[0], axis=1)
-        recommendation_df = chart_tracks_df[chart_tracks_df.track_id != seed_track_data.track_id.squeeze()]
+        
+        # Generate recommendations
+        recommendation_df = chart_tracks_df[chart_tracks_df.track_name != seed_track_data.track_name.squeeze()]
+        #recommendation_df = recommendation_df[["track_name", "track_id"]].drop_duplicates("track_name").merge(recommendation_df.drop(["track_name"], axis=1), on="track_id", how="left")
+        recommendation_df.drop_duplicates("track_name", inplace=True)
         recommendation_df = recommendation_df.sort_values(by=metric).head(items)
-        recommendation_df = recommendation_df[['track_id','track_name','artist_name','cosine_dist','predicted_genre']+cols]
+
+        recommendation_df = recommendation_df[['track_id','track_name','artist_name','cosine_dist', "manhattan_dist", "euclidean_dist",'predicted_genre']+cols]
+        # Assign values
         self.recommendations = recommendation_df
         self.recommendation_ids = recommendation_df['track_id'].values.tolist()
 
