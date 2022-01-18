@@ -1,7 +1,7 @@
 import streamlit as st
 
-from pages import conclusion, introduction, objective, time_series
-from pages.recommender import Recommender_Page
+from st_pages import conclusion, introduction, objective, time_series
+from st_pages.recommender import Recommender_Page
 
 def initialize():
     PAGES = [
