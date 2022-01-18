@@ -3,8 +3,6 @@ import streamlit as st
 from st_pages import conclusion, introduction, objective, time_series
 from st_pages.recommender import Recommender_Page
 
-import os
-
 def initialize():
     PAGES = [
         'Introduction',
