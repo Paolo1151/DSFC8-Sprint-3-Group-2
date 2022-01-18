@@ -9,10 +9,10 @@ def display():
     st.write("")
     st.subheader("Conclusion")
     st.write("")
-    conclusion = Image.open(os.getcwd() + "/Assets/Images/conclusion.png")
+    conclusion = Image.open(os.getcwd() + "/Assets/Images/conclusion.PNG")
     st.image(conclusion)
     
     st.write("")
     st.subheader("Recommendations")
-    recommendations = Image.open(os.getcwd() + "/Assets/Images/recommendations.png")
+    recommendations = Image.open(os.getcwd() + "/Assets/Images/recommendations.PNG")
     st.image(recommendations)
