@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 
 
-def conclusion():
+def display():
     st.title("Conclusions and Recommendations")
 
     st.write("")
@@ -15,5 +15,3 @@ def conclusion():
     st.subheader("Recommendations")
     recommendations = Image.open("Assets\Images\Recommendations.PNG")
     st.image(recommendations)
-    
-    pass
