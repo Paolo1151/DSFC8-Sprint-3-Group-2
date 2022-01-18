@@ -16,7 +16,7 @@ def initialize():
 
     print(os.getcwd())
     print(os.listdir())
-    print(os.listdir(os.getcwd() + '/Assets'))
+    print(os.listdir(os.getcwd() + '/Assets/Images'))
 
     page = st.sidebar.radio("Page Navigation", PAGES)
 
