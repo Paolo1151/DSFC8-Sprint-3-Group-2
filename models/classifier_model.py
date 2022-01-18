@@ -2,9 +2,6 @@ import pandas as pd
 import numpy as np
 
 import joblib as j
-from sklearnex import patch_sklearn
-patch_sklearn()
-
 
 
 # Directory
