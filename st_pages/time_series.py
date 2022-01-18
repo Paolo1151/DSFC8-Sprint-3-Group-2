@@ -132,9 +132,9 @@ We created 3 Models that would help get us this insight:
 First, let's check how their forecasts compare to true values.
     """)
 
-    arima_valid = Image.open(os.getcwd()+'/assets/images/ARIMA_validation.jpg')
-    exponential_valid = Image.open(os.getcwd()+'/assets/images/Expo_Validation.jpg')
-    ml_valid = Image.open(os.getcwd()+'/assets/images/ML_Validation.jpg')
+    arima_valid = Image.open(os.getcwd()+'/Assets/Images/ARIMA_validation.jpg')
+    exponential_valid = Image.open(os.getcwd()+'/Assets/Images/Expo_Validation.jpg')
+    ml_valid = Image.open(os.getcwd()+'/Assets/Images/ML_Validation.jpg')
 
     st.image(arima_valid, caption="ARIMA Validation Performance")
     st.image(exponential_valid, caption="Exponential Smoothing Validation Performance")
@@ -148,7 +148,7 @@ on the ML Model. Perhaps more engineering is required for the ML Model to learn 
 Using the XGBoost Model, we are able to forecast where hiphop will be going for the next month
     """)
 
-    ml_fore = Image.open(os.getcwd()+'/assets/images/ML_Forecast.jpg')
+    ml_fore = Image.open(os.getcwd()+'/Assets/Images/ML_Forecast.jpg')
 
     st.image(ml_fore, caption="Hiphop Number of Streams forecast for the next month")
 
