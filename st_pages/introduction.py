@@ -10,6 +10,10 @@ def display():
     
     title_slide = Image.open(os.getcwd() + '/Assets/Images/TitleSlide.png')
     
+    print(os.getcwd())
+    print(os.listdir())
+    print(os.listdir(os.getcwd() + '/Assets'))
+
     st.write("")
     st.subheader("WHO IS ABRA?")
     st.write("https://abraofficial.com/")
