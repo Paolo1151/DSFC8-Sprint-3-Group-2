@@ -3,6 +3,8 @@ import streamlit as st
 from st_pages import conclusion, introduction, objective, time_series
 from st_pages.recommender import Recommender_Page
 
+import os
+
 def initialize():
     PAGES = [
         'Introduction',
@@ -11,6 +13,10 @@ def initialize():
         'Recommendation Engine',
         'Conclusion and Recommendations'
     ]
+
+    print(os.getcwd())
+    print(os.listdir())
+    print(os.listdir(os.getcwd() + '/Assets'))
 
     page = st.sidebar.radio("Page Navigation", PAGES)
 

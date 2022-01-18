@@ -9,10 +9,6 @@ def display():
     st.write('Paolo, Kui, Ale, Selin, MaCris (mentored by Aaron)')
     
     title_slide = Image.open(os.getcwd() + '/Assets/Images/TitleSlide.png')
-    
-    print(os.getcwd())
-    print(os.listdir())
-    print(os.listdir(os.getcwd() + '/Assets'))
 
     st.write("")
     st.subheader("WHO IS ABRA?")
