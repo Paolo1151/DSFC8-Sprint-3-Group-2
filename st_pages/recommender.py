@@ -152,7 +152,7 @@ class Recommender_Page():
         for i in range(3):
             for j in range(3):
                 col_name = seed_service.feature_cols[i*3+j]
-                sns.histplot(data = raw_df[col_name], ax = axs[i,j], kde=True)
+                sns.histplot(data = raw_df[col_name], ax = axs[i,j], kde=True, bins=10)
                 axs[i,j].set_title(col_name)
                 axs[i,j].set(xlabel='')
 
